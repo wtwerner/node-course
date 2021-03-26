@@ -52,7 +52,7 @@ const readNote = (title) => {
         console.log(chalk.blue(foundNote.title))
         console.log(foundNote.body)
     } else {
-        console.log(chalk.red.inverse('No note found with that tile'))
+        console.log(chalk.red.inverse('No note found with that title'))
     }
 }
 
