@@ -1,12 +1,12 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-const userInput = process.argv[2]
+const location = process.argv[2]
 
-if (!userInput) {
-    console.log('Must enter a location')
+if (!location) {
+    console.log('Please provide a location')
 } else {
-    geocode(process.argv[2], (err, data) => {
+    geocode(location, (err, data) => {
         if (err) {
             return console.log(err)
         } 
