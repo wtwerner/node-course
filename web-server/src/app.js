@@ -40,10 +40,19 @@ app.get('/help', (req, res) => {
     })
 })
 
-app.get('/weather', (req, res) => {
-    res.send({
-        forecast: 'Sunny',
-        location: 'Winnetka'
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: 'Error',
+        name: 'Tommy Werner',
+        errorMessage: 'Help article not found.'
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: 'Error',
+        name: 'Tommy Werner',
+        errorMessage: 'Page not found.'
     })
 })
 
